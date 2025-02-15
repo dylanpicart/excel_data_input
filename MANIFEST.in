@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+include requirements.txt
+include setup.py
+include data/**
+include logs/**
+include src/**
+include tests/**
+global-exclude __pycache__/* *.pyc *.pyo *.pyd
