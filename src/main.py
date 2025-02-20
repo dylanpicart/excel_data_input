@@ -1,8 +1,6 @@
 import os
 import logging
-import shlex
 import pandas as pd
-from tqdm import tqdm
 from utils import setup_logging, convert_path_if_wsl, load_excel, normalize_columns, ensure_output_directory, validate_input_file
 from synonym_map import BASE_PRIMARY_KEY, ALL_SYNONYM_MAPS
 

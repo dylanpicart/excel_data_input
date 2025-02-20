@@ -32,7 +32,7 @@ project-root/
 
 ## Requirements
 - Python 3.7+
-- `pandas`, `openpyxl`, `tqdm`
+- `pandas`, `openpyxl`
 
 Install dependencies using:
 ```bash
@@ -96,6 +96,18 @@ excelmerge --file_path "path_to_excel_file.xlsx" --map_key ethnicity
 2. Run the script via terminal.
 3. The merged Excel will appear in `data/output/`.
 
+Once the script completes, you can open the merged Excel file directly using:
+
+**Bash (WSL/Linux)**:
+```bash
+xdg-open data/output/merged_input.xlsx
+```
+
+**PowerShell (Windows)**:
+```powershell
+Start-Process "data/output/merged_input.xlsx"
+```
+
 **Note:** You can also run the script from any directory if you have added the alias or function as instructed.
 
 ## What is Required
@@ -120,6 +132,10 @@ To ensure reliable testing, consider these steps:
 
 While optional for smaller projects, these steps enhance test reliability and automation.
 
+**Note**: For testing, run the following if `pytest tests/` returns a `ModuleNotFoundError`:
+```bash
+venv/bin/python -m pytest tests/
+```
 ## **License**
 This project is licensed under the MIT License. See the LICENSE file for details.
 
